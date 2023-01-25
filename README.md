@@ -43,3 +43,6 @@ or through `@apply`:
 ```
 
 In the first case there will be no error reported during processing if you misspelled the name `content-auto`. The latter is not only more readable, yields smaller final js+css bundle when compressed (because of ordering of layered classes which results in repeatable blocks in definitions which in turn compresses better) but also is being checked during build preventing you from misspelling your utility class name.
+
+Oh, and by the way, this also works for other classes, even defined in the same fiele!
+
