@@ -15,3 +15,10 @@ const { now } = storeToRefs(useDateStore())
 // import { useDate } from '@/composables/date'
 // const { now } = useDate()
 </script>
+
+
+<style lang="postcss">
+.test {
+  @apply text-xl text-gray-800;
+}
+</style>
