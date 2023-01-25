@@ -22,7 +22,7 @@ const { now } = storeToRefs(useDateStore())
 }
 
 .now {
-  @apply border border-red-100;
+  @apply border border-red-100 content-auto;
   @apply font-extrabold;
 }
 
