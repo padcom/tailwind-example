@@ -1,4 +1,4 @@
-# tailwind-example
+# TailwindCSS Example
 
 This template should help get you started developing with Vue, Vite and fully configured Tailwind CSS with unused class elimination.
 
