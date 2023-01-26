@@ -36,7 +36,7 @@ Now, you should put your styles where they belong. In the case of TailwindCSS we
 </style>
 ```
 
-This way you're going to make the resulting css+js bundle smaller after compression. The reason for it is, actually, surprising! If you just build your app with inline TailwindCSS macros vs using `@apply` in a separate script block then then the classes become more repetitive (TailwindCSS sorts the applied classes by `@layer`s!!!) which means the compression algorithm can describe the same block of data using smaller number of bits (generally speaking).
+This way you're going to make the resulting css+js bundle smaller after compression. The reason for it is, actually, surprising! If you just build your app with `@apply` in a separate style  block vs using TailwindCSS macros inline then the classes become more repetitive (TailwindCSS sorts the applied classes by `@layer`s!!!) which means the compression algorithm can describe the same block of data using smaller number of bits (generally speaking).
 
 If you'd like you can also have multiple `@apply` directives in one class. That'll allow you to group macros logically, as you see fit and overcome the ultra long lines problem.
 
@@ -76,7 +76,7 @@ or through `@apply`:
 
 In the first case there will be no error reported during processing if you misspelled the name `content-auto`. The latter is not only more readable, yields smaller final js+css bundle when compressed (because of ordering of layered classes which results in repeatable blocks in definitions which in turn compresses better) but also is being checked during build preventing you from misspelling your utility class name.
 
-Oh, and by the way, this also works for other classes, even defined in the same fiele. It is, however, strongly adviced that you do assign your global custom classes you want to use to any defined `@layer`. This will allow TailwindCSS to put your classes in the right order in the resulting CSS file, thus helping to keep the compressed file small.
+Oh, and by the way, this also works for other classes, even defined in the same file. It is, however, strongly adviced that you do assign your global custom classes you want to use to any defined `@layer`. This will allow TailwindCSS to put your classes in the right order in the resulting CSS file, thus helping to keep the compressed file small.
 
 ## Comparison of bundle size - inline vs @apply
 
