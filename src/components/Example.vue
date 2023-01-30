@@ -19,11 +19,12 @@ const { now } = storeToRefs(useDateStore())
 <style lang="postcss">
 .example {
   @apply text-5xl line-clamp-4;
-}
 
-.now {
-  @apply border border-red-100 content-auto;
-  @apply font-extrabold;
+  .now {
+    @apply border border-red-100 content-auto;
+    @apply font-extrabold;
+    @apply bg-red-400;
+  }
 }
 
 /* This class will NOT be included */
